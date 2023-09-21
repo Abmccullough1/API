@@ -1,0 +1,31 @@
+.header {
+  background-image: url(images/city.jpeg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-size: 50pt;
+  padding: 5%;
+  text-align: center;
+}
+body {
+  background-image: url(images/download.jpeg);
+  background-size: 8%;
+  background-position: 100%;
+}
+.HTML,
+body {
+  margin: 0;
+  padding: 0;
+}
+.title {
+  font-size: 60pt;
+  background: linear-gradient(to right, white, red, blue, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-family: "Super Squad", sans-serif;
+}
+.search {
+  position: absolute;
+  right: 15%;
+  font-size: 15pt;
+}
