@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "../../Downloads/webfontkit-20230921-141712"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "API project"
+  }
+}

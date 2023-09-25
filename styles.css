@@ -36,3 +36,10 @@ body {
   background-color: red;
   font-size: 15pt;
 }
+.BORDER{
+  text-align: center;
+  
+
+  border-style: ridge;
+  background-color: white;
+}
