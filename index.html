@@ -1,34 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" class="HTML">
-
-<head>
-    <link href="https://fonts.cdnfonts.com/css/super-squad" rel="stylesheet">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API project</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<header class="header">
-
-    <div class="title">
-        MARVELLOUS
-    </div>
-
-</header>
-
+  <html lang="en" class="HTML">
+  
+  <head>
+      <link href="https://fonts.cdnfonts.com/css/super-squad" rel="stylesheet">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>API project</title>
+      <link rel="stylesheet" href="styles.css">
+      <link href="https://fonts.cdnfonts.com/css/richis-stiller" rel="stylesheet">
+                
+  </head>
+  <header class="header">
+  
+      <div class="title">
+          MARVELLOUS
+      </div>
+  
+  </header>
+  
 <body>
-    <button id="submit" class="submit-box">
-        Submit
-    </button>
-    <input style="text" class="search" id="search" placeholder="search">
-   <center>
-    <border class="BORDER">
-       <script src="main.js"></script>
-    </border>
-</center>
-   
+  
+<table class="stuff">
+  <tr><td>
+    <h1>Get a Random Hero</h1>
+  <button onclick="getRandomCharacter()" class="random_but">Get Random Superhero</button>
+  <div id="characterInfo"></div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+  <script src="main.js"></script>
+  </td>
+</tr>
+</table>
+  
 </body>
-
 </html>

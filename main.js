@@ -1,39 +1,27 @@
-/*public:e9ad643135fd033699220f64b3b81e6b
-  private: f67545ccaf24623b9c40f31abf3cd3fde91a9d53
-1f67545ccaf24623b9c40f31abf3cd3fde91a9d53e9ad643135fd033699220f64b3b81e6b
-hash:0fd19ed03a2c74ddbe40c5201d33c660
-url:  http://gateway.marvel.com/v1/public/comics?ts=1&apikey=e9ad643135fd033699220f64b3b81e6b&hash=0fd19ed03a2c74ddbe40c5201d33c660
-*/
-import React, { useEffect } from "react";
-import card from "./card";
-import axios from "axios";
-import { useState } from "react";
-export const main = () => {
-    const [url,setUrl]=useState("http://gateway.marvel.com/v1/public/comics?ts=1&apikey=e9ad643135fd033699220f64b3b81e6b&hash=6111e72d48eb85fa8a112ca310256be7");
-    const [item,setItem]=useState();
-    useEffect(()=>{
-        const fetch=async()=>{
-          const res=await axios.get(url)
-          setItem(res.data.data.results);
-        }
-        fetch();
-      },[url])
-      return(
-       <>
-       <div className="content">
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-       </div>
-       </>
-      )
 
-     
+const publicKey = "e9ad643135fd033699220f64b3b81e6b"; 
+const privateKey = "f67545ccaf24623b9c40f31abf3cd3fde91a9d53"; 
+const apiUrl = "https://gateway.marvel.com/v1/public/characters";
 
+function getRandomCharacter() {
+  const ts = new Date().getTime();
+  const randomCharacterId = Math.floor(Math.random() * 1490) + 1;
 
-
-
-
-  }   
+  fetch(
+    `https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=e9ad643135fd033699220f64b3b81e6b&hash=6111e72d48eb85fa8a112ca310256be7`
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      let randNum = Math.floor(Math.random() * 20);
+      const character = data.data.results[randNum];
+      const characterInfo = document.getElementById("characterInfo");
+      characterInfo.innerHTML = "";
+      characterInfo.innerHTML = `
+      <h2>Name: ${character.name}</h2>
+      <p>Description: ${character.description}</p>
+      <img src="${character.thumbnail.path}.${character.thumbnail.extension}" alt="${character.name}"style=" height:200px">
+    `;
+    })
+    .catch((error) => console.error("Error:", error));
+}
