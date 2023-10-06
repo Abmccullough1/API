@@ -20,7 +20,7 @@ function getRandomCharacter() {
       characterInfo.innerHTML = `
       <h2>Name: ${character.name}</h2>
       <p>Description: ${character.description}</p>
-      <img src="${character.thumbnail.path}.${character.thumbnail.extension}" alt="${character.name}"style=" height:200px">
+      <img src="${character.thumbnail.path}.${character.thumbnail.extension}" alt="${character.name}" class ="image">
     `;
     })
     .catch((error) => console.error("Error:", error));

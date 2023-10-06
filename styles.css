@@ -48,3 +48,6 @@ body {
   border: ridge black 3pt;
   background-color: white;
 }
+.image{
+  height: 200px;
+}
