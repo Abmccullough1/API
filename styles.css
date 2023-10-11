@@ -47,7 +47,9 @@ body {
   text-align: center;
   border: ridge black 3pt;
   background-color: white;
+  max-width: 300px;
+  max-height: 300px;
 }
-.image{
+.image {
   height: 200px;
 }
